@@ -1,0 +1,26 @@
+@import "../../Sass/mixins";
+
+.testimonial {
+
+}
+
+.userImg {
+  width: 50px;
+  border-radius: 50%;
+
+  & img {
+  border-radius: inherit;
+  }
+}
+
+.testimonial p {
+
+}
+
+.testimonial h3 {
+
+}
+
+.testimonial span {
+  display: block;
+}
