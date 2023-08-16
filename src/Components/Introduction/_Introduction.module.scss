@@ -1,8 +1,6 @@
 @import "../../Sass/mixins";
 
-.introduction {
-
-}
+.introduction {}
 
 .img {
   width: calc(100vw - (100vw - 100%));
@@ -42,9 +40,7 @@
   width: 30px;
 }
 
-.services {
-
-}
+.services {}
 
 .serviceContainer {
   display: grid;
@@ -52,7 +48,10 @@
 }
 
 .serviceImg {
-
+  user-select: none;
+  & img {
+    object-fit: cover;
+  }
 }
 
 

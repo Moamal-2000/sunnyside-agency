@@ -1,7 +1,12 @@
+import { useState } from "react";
+import MobileNav from "./MobileNav";
 import Nav from "./Nav";
 import styles from "./_Header.module.scss";
 
 const Header = () => {
+  const [isMobileNavActive, setIsMobileNavActive] = useState(false);
+  const mobileNavState = { isMobileNavActive, setIsMobileNavActive };
+
   return (
     <header className={styles.header}>
       <a className={styles.logo} href="\#" title="logo link">
@@ -9,6 +14,7 @@ const Header = () => {
       </a>
 
       <Nav />
+      <MobileNav mobileNavState={mobileNavState} />
     </header>
   );
 };

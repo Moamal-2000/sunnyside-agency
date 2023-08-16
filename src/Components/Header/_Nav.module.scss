@@ -1,9 +1,10 @@
 @import "../../Sass/mixins";
 
-.nav {
-
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
 }
-
 
 .nav ul {
   display: flex;

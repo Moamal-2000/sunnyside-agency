@@ -32,7 +32,7 @@ const Introduction = () => {
             most of the marketing for you.
           </ServiceComp>
 
-          <div className={styles.servicerImg}>
+          <div className={styles.serviceImg}>
             <img
               src={require("../../images/desktop/image-transform.jpg")}
               alt="yellow background and egg"
@@ -41,7 +41,7 @@ const Introduction = () => {
         </div>
 
         <div className={styles.serviceContainer}>
-          <div className={styles.servicerImg}>
+          <div className={styles.serviceImg}>
             <img
               src={require("../../images/desktop/image-stand-out.jpg")}
               alt="pink background with weird shape item"

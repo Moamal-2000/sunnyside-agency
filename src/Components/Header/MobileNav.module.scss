@@ -1,0 +1,93 @@
+@import "../../Sass/mixins";
+
+.openNav {
+  display: none;
+  user-select: none;
+  cursor: pointer;
+  @include prefix(transition, .3s);
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &.active {
+    pointer-events: all;
+    opacity: .7;
+  }
+}
+
+.nav {
+  position: fixed;
+  left: 0;
+  top: 120px;
+  background-color: var(--white);
+  width: calc(100% - (20px * 2));
+  margin: 0 20px;
+  z-index: 1000;
+  user-select: none;
+  @include prefix(transition, opacity .3s);
+  pointer-events: none;
+  opacity: 0;
+
+  &.active {
+    pointer-events: all;
+    opacity: 1;
+  }
+}
+
+.nav::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -30px;
+  border: solid 30px;
+  border-color: transparent var(--white) var(--white) transparent;
+}
+
+@media (max-width: 768px) {
+
+  .openNav,
+  .nav {
+    display: block;
+  }
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  font-family: 'Barlow', sans-serif;
+  padding: 40px;
+}
+
+.nav ul li a {
+  color: var(--grayish-blue);
+  font-size: 1.2rem;
+}
+
+.nav ul li a.active {
+  display: block;
+  font-family: 'Fraunces', serif;
+  color: var(--very-dark-desaturated-blue);
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: var(--yellow);
+  border-radius: 50px;
+  padding: 14px 26px;
+  font-size: .5rem;
+}
+
+
+:root {
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --dark-desaturated-cyan: hsl(167, 40%, 24%);
+  --dark-blue: hsl(198, 62%, 26%);
+  --dark-moderate-cyan: hsl(168, 34%, 41%);
+  --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+}
