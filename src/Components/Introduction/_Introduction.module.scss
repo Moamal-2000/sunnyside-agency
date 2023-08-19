@@ -51,8 +51,13 @@
   }
 }
 
-.introduction .content .arrowImg {
+.introduction .content a .arrowImg {
   width: 30px;
+  @include prefix(transition, opacity .2s);
+
+  &:hover {
+    opacity: .8;
+  }
 }
 
 .serviceContainer {

@@ -1,7 +1,6 @@
 import styles from "./_ServiceComp.module.scss";
 
 const ServiceComp = ({ title, children, id }) => {
-  console.log(id);
   return (
     <div className={styles.service}>
       <div className={styles.content}>

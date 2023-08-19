@@ -77,10 +77,10 @@
   font-weight: bold;
   text-transform: uppercase;
   background-color: var(--yellow);
-  border-radius: 50px;
   padding: 14px 26px;
   font-size: .5rem;
   font-weight: 900;
+  @include prefix(border-radius, 50px);
   @include prefix(transition, background-color .3s);
 
   &:hover {

@@ -1,3 +1,5 @@
+@import "./Sass/mixins";
+
 * {
   margin: 0;
   padding: 0;
@@ -14,17 +16,36 @@ body {
   font-weight: 500;
 }
 
+::selection {
+  background-color: var(--dark-moderate-cyan);
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  background-color: #eee;
+  width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--soft-red);
+  @include prefix(border-radius, 4px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(254, 121, 103, .8);
+}
+
 :root {
-  --soft-red: hsl(7, 99%, 70%);
-  --yellow: hsl(51, 100%, 49%);
-  --dark-desaturated-cyan: hsl(167, 40%, 24%);
-  --dark-blue: hsl(198, 62%, 26%);
-  --dark-moderate-cyan: hsl(167, 44%, 70%);
-  --very-dark-desaturated-blue: hsl(212, 27%, 19%);
-  --very-dark-grayish-blue: hsl(213, 9%, 39%);
-  --dark-grayish-blue: hsl(232, 10%, 55%);
-  --grayish-blue: hsl(210, 4%, 67%);
-  --white: hsl(0, 0%, 100%);
+  --soft-red: #fe7867;
+  --yellow: #fad400;
+  --dark-desaturated-cyan: #25564b;
+  --dark-blue: #19536b;
+  --dark-moderate-cyan: #91d4c6;
+  --very-dark-desaturated-blue: #23303e;
+  --very-dark-grayish-blue: #5a636c;
+  --dark-grayish-blue: #818498;
+  --grayish-blue: #a7abae;
+  --white: #fff;
 }
 
 .container {

@@ -1,7 +1,21 @@
+import { useEffect } from "react";
 import styles from "./MobileNav.module.scss";
 
 const MobileNav = ({ mobileNavState }) => {
   const { isMobileNavActive, setIsMobileNavActive } = mobileNavState;
+
+  useEffect(() => {
+    function handleResizeEvent() {
+      if (window.innerWidth >= 768 && isMobileNavActive)
+        setIsMobileNavActive(false);
+    }
+
+    window.addEventListener("resize", () => handleResizeEvent());
+
+    return () => {
+      window.removeEventListener("resize", handleResizeEvent);
+    };
+  }, [isMobileNavActive, setIsMobileNavActive]);
 
   return (
     <>
@@ -9,7 +23,7 @@ const MobileNav = ({ mobileNavState }) => {
         className={`${styles.openNav} ${
           isMobileNavActive ? styles.active : ""
         }`}
-        onClick={() => setIsMobileNavActive((prev) => !prev)}
+        onClick={() => setIsMobileNavActive((prevState) => !prevState)}
       >
         <img
           src={require("../../images/icon-hamburger.svg").default}
