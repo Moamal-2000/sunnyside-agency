@@ -1,0 +1,26 @@
+@import "../../Sass/mixins";
+
+.imagesSection {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  user-select: none;
+}
+
+@media (max-width: 1200px) {
+  .imagesSection {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .imagesSection {
+    display: none;
+  }
+}
+
+.img {
+  & img {
+    object-fit: cover;
+  }
+}
