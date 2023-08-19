@@ -18,7 +18,12 @@
 
 .nav ul li a {
   color: var(--white);
-  font-size: 1rem;
+  font-size: 1.1rem;
+  @include prefix(transition, opacity .3s);
+
+  &:not(.active):hover {
+    opacity: .8;
+  }
 }
 
 .nav ul li a.active {
@@ -30,18 +35,10 @@
   border-radius: 50px;
   padding: 14px 26px;
   font-size: .5rem;
-}
+  @include prefix(transition, background-color .3s);
 
-
-:root {
-  --soft-red: hsl(7, 99%, 70%);
-  --yellow: hsl(51, 100%, 49%);
-  --dark-desaturated-cyan: hsl(167, 40%, 24%);
-  --dark-blue: hsl(198, 62%, 26%);
-  --dark-moderate-cyan: hsl(168, 34%, 41%);
-  --very-dark-desaturated-blue: hsl(212, 27%, 19%);
-  --very-dark-grayish-blue: hsl(213, 9%, 39%);
-  --dark-grayish-blue: hsl(232, 10%, 55%);
-  --grayish-blue: hsl(210, 4%, 67%);
-  --white: hsl(0, 0%, 100%);
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.412);
+    color: var(--white);
+  }
 }

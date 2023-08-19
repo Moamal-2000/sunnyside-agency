@@ -67,10 +67,15 @@
   opacity: .3;
   border-radius: 50px;
   z-index: -1;
+  @include prefix(transition, opacity .2s)
 }
 
 .learnMore.second::before {
   background-color: var(--soft-red);
+}
+
+.learnMore:hover::before {
+  opacity: .9;
 }
 
 :root {

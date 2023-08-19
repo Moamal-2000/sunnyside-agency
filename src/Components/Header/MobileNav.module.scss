@@ -64,6 +64,10 @@
 .nav ul li a {
   color: var(--very-dark-grayish-blue);
   font-size: 1.2rem;
+
+  &:hover {
+    opacity: .8;
+  }
 }
 
 .nav ul li a.active {
@@ -77,4 +81,9 @@
   padding: 14px 26px;
   font-size: .5rem;
   font-weight: 900;
+  @include prefix(transition, background-color .3s);
+
+  &:hover {
+    background-color: var(--soft-red);
+  }
 }
