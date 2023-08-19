@@ -9,6 +9,12 @@
   padding: 60px;
 }
 
+@media (max-width: 992px) {
+  .service {
+    padding: 60px 20px;
+  }
+}
+
 .backgroundImg {
   position: absolute;
   left: 0;
@@ -18,7 +24,13 @@
 }
 
 .content {
-  width: 300px;
+  width: 340px;
+}
+
+@media (max-width: 992px) {
+  .content {
+    width: 320px;
+  }
 }
 
 .content h2 {
@@ -26,13 +38,16 @@
   font-size: 1.9rem;
   font-weight: 900;
   text-align: center;
+  opacity: .9;
 }
 
 .content p {
   color: var(--very-dark-desaturated-blue);
-  font-size: .9rem;
+  font-size: 1rem;
   line-height: 1.6;
+  font-weight: 600;
   margin-top: 30px;
   font-family: 'Barlow', sans-serif;
   text-align: center;
+  opacity: .9;
 }

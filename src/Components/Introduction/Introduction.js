@@ -26,7 +26,7 @@ const Introduction = () => {
 
       <div className={styles.services} id="services">
         <div className={styles.serviceContainer}>
-          <ServiceComp title="Transform your brand">
+          <ServiceComp id="1" title="Transform your brand">
             We are a full-service creative agency specializing in helping brands
             grow fast. Engage your clients through compelling visuals that do
             most of the marketing for you.
@@ -48,7 +48,7 @@ const Introduction = () => {
             />
           </div>
 
-          <ServiceComp title="Stand out to the right audience">
+          <ServiceComp id="2" title="Stand out to the right audience">
             Using a collaborative formula of designers, researchers,
             photographers, videographers, and copywriters, we’ll build and
             extend your brand in digital places.
